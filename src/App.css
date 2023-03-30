@@ -284,6 +284,9 @@ input, select {height: 50px;}
   margin-left: 10px;
 }
 
+.subSectionHeading {
+  margin-bottom: 60px;
+}
 .subSectionHeading > .col-form-label{
   font-weight: 600;
   font-size: 18px;
