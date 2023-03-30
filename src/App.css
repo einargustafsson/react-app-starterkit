@@ -36,7 +36,8 @@
 
 /* General UI */
 .col-form-label {font-size: 14px;}
-.card-title, .formio-form .card-header, .bg-default {background-color: transparent !important; font-weight: 800; text-transform: capitalize;}
+.card-title, .formio-form .card-header, .bg-default {background-color: transparent !important; }
+.card-title {font-size: 20px;font-weight: 800;}
 input, select {height: 50px;}
 .action-panel .card-body{border: none;}
 
@@ -97,9 +98,7 @@ input, select {height: 50px;}
 
 
 /* select box */
-.choices__list {
- 
-}
+
 .form-control.dropdown {padding: 10px 10px;}
 .formio-component-multiple .form-control.dropdown { padding: 5px 10px 0 10px;}
 .choices__input, .dropdown, textarea.form-control, .form-control {background-color: #F5F5F5;}
@@ -233,6 +232,64 @@ input, select {height: 50px;}
 }
 
 
+/*Handling for multi list groups such as contacts and medicince*/
+
+.list-group-header {display: none;}
+.list-group-item {border:none; background-color: transparent;}
+.list-group-item + .list-group-item .addedValues {border-top-width: 1px; }
+.list-group-item > .addedValues {
+    align-items: center;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.list-group-item .addedValues div:nth-child(1) { 
+    /*order: -1;*/
+    font-size: 30px;
+    padding-top: 30px;
+    font-weight: 800;
+    height: 100px;    
+    text-align: center;
+    border-right: 1px solid #ececec;
+    width: 150px;
+    color:#036346;
+}
+.list-group-item .addedValues div:nth-child(1).pull-right {
+  border: none;
+}
+.list-group-item .addedValues div:nth-child(3), .list-group-item .addedValues div:nth-child(2) { 
+    font-weight: 800;
+    flex-basis: content;
+    margin-top: -30px;
+}
+.list-group-item .addedValues div:nth-child(4) {
+    font-weight: 500;
+    flex-basis: content;
+    margin-top: 30px;
+    position:absolute;
+    left: 155px;
+    
+}
+.list-group-item .addedValues div:nth-child(5) {
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+.list-group-item .editgrid-actions {
+  text-align: right;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.list-group-item .editgrid-actions .btn {
+  margin-left: 10px;
+}
+
+.subSectionHeading > .col-form-label{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
 
 /* archive 
 .add-description .form-radio .radio {border-color: #F2F2F2; background: #F9F9F9; margin-bottom: 10px; border-radius: 8px; padding: 10px 20px;}
